@@ -1,6 +1,20 @@
 import React from 'react';
 import './NewsArticle.css';
 
-// NEWSARTICLE COMPONENT CODE GOES HERE
+const NewsArticle = (props) => {
+  return (
+    <div className='NewsArticle'>
+      <img src={props.img}/>
+      <div>
+        <h3>{props.headline}</h3>
+        <p>{props.description}</p>
+      </div>
+      <div class='site-link'>
+        <a href={props.url}>Click 4 Website</a>
+      </div>
+    </div>
+  );
+}
+
 
 export default NewsArticle;

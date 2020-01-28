@@ -1,0 +1,13 @@
+.NewsArticle {
+  border: 3px white solid;
+  color: white;
+  width: 20%;
+}
+
+img {
+  width: 100%;
+}
+
+.site-link {
+  background-color: yellow;
+}
