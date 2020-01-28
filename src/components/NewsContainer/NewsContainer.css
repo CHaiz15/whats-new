@@ -1,0 +1,5 @@
+.NewsContainer {
+  display: flex;
+  flex-flow: wrap;
+  margin: 0;
+}
