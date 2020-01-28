@@ -9,7 +9,7 @@ const NewsArticle = (props) => {
         <h3>{props.headline}</h3>
         <p>{props.description}</p>
       </div>
-      <div class='site-link'>
+      <div className='site-link'>
         <a href={props.url}>Click 4 Website</a>
       </div>
     </div>

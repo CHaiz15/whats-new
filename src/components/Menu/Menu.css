@@ -1,0 +1,9 @@
+.Menu {
+  display: flex;
+  flex-flow: wrap;
+  width: 50%;
+}
+
+.src-btn {
+  width: 100%;
+}
