@@ -7,29 +7,48 @@ import technology from '../../data/technology';
 import './App.css';
 import NewsContainer from '../NewsContainer/NewsContainer.js'
 import Menu from '../Menu/Menu.js'
+import SearchForm from '../SearchForm/SearchForm.js'
 
+// let newsData = {
+// fetch('https://whats-new-api.herokuapp.com/api/v1/news')
+// .then(response => response.json())
+// .then(data => this.setState({newsData: data, isLoading: false}))
+// .catch(error => this.setState({ error, isLoading: false}));
+// }
+let newsData = {
+    entertainment: entertainment,
+    health: health,
+    local: local,
+    science: science,
+    technology: technology,
+}
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      newsData: {
-        entertainment: entertainment,
-        health: health,
-        local: local,
-        science: science,
-        technology: technology,
-      },
+      searchValue: '',
+      newsData: newsData,
       currentSource: 'local',
     };
   };
   updateSource = (event) => {
     this.setState({currentSource: event.target.name})
   }
+  searchArticles = (searchValue) => {
+    let filteredArticles = this.state.newsData[this.state.currentSource].filter(article => {
+      return article.headline.toLowerCase().includes(searchValue.toLowerCase())
+    })
+    this.setState({currentSource: 'filtered', newsData: {...newsData, filtered: filteredArticles}})
+  }
+  updateSearchInput = (event) => {
+    this.setState({searchValue: event.target.value})
+  }
   render() {
     return (
       <div className="app">
         <Menu updateSource={this.updateSource}/>
-        <NewsContainer localNews={this.state.newsData[this.state.currentSource]} />
+        <SearchForm searchArticles={this.searchArticles} searchValue={this.state.searchValue} updateSearchInput={this.updateSearchInput}/>
+        <NewsContainer newsSource={this.state.newsData[this.state.currentSource]}/>
       </div>
     );
   }
