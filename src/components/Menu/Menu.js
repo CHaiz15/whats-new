@@ -1,7 +1,7 @@
 import React from 'react';
 import './Menu.css'
 
-const Menu = ( {updateSource} ) => {
+const Menu = ({updateSource}) => {
     return (
       <div className='Menu'>
         <button className='src-btn' name='local' onClick={updateSource}>Local News</button>
