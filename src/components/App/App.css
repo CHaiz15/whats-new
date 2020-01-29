@@ -5,7 +5,9 @@
 }
 
 .app {
-  display: flex;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-content: center;
   background: #141527;
   height: 100vh;
   text-align: center;
