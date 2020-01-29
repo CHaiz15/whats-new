@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewsContainer renders an indication of newsSource 1`] = `
+<div
+  className="NewsContainer"
+>
+  <NewsArticle
+    description="Broncos miss the playoffs"
+    headline="Broncos lose"
+    img="bronco.png"
+    key="Broncos lose"
+    url="gobroncos.com"
+  />
+</div>
+`;
+
+exports[`NewsContainer renders an indication of no newsSource 1`] = `
+<div
+  className="NewsContainer"
+/>
+`;
