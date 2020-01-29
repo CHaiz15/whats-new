@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu renders an indication Menu 1`] = `
+<div
+  className="Menu"
+>
+  <button
+    className="src-btn"
+    name="local"
+    onClick={[MockFunction]}
+  >
+    Local News
+  </button>
+  <button
+    className="src-btn"
+    name="technology"
+    onClick={[MockFunction]}
+  >
+    Technology
+  </button>
+  <button
+    className="src-btn"
+    name="entertainment"
+    onClick={[MockFunction]}
+  >
+    Entertainment
+  </button>
+  <button
+    className="src-btn"
+    name="science"
+    onClick={[MockFunction]}
+  >
+    Science
+  </button>
+  <button
+    className="src-btn"
+    name="health"
+    onClick={[MockFunction]}
+  >
+    Health
+  </button>
+</div>
+`;

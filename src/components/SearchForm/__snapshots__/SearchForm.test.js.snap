@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchForm renders an indication of searchForm 1`] = `
+<div
+  className="search-container"
+>
+  <h3>
+    Search Articles:
+  </h3>
+  <input
+    className="SearchForm"
+    onChange={[MockFunction]}
+    placeholder="Type here..."
+    type="text"
+    value=""
+  />
+  <button
+    onClick={[Function]}
+  >
+    Search
+  </button>
+</div>
+`;

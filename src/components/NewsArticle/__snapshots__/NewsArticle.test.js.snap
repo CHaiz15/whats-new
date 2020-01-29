@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewsArticle renders an indication of a NewsArticle 1`] = `
+<div
+  className="NewsArticle"
+>
+  <img
+    src="bronco.png"
+  />
+  <div>
+    <h3>
+      Broncos lose
+    </h3>
+    <p>
+      Broncos miss the playoffs
+    </p>
+  </div>
+  <div
+    className="site-link"
+  >
+    <a
+      href="gobroncos.com"
+    >
+      Click 4 Website
+    </a>
+  </div>
+</div>
+`;
