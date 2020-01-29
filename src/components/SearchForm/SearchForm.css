@@ -1,0 +1,13 @@
+.SearchForm {
+  margin: 5px;
+  width: 30%;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+}
+
+h3 {
+  color: white;
+}
