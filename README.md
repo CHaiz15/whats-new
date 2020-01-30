@@ -13,6 +13,7 @@
   * A React application that displays news from various sources and allows the user to filter through them.
   
 ### Example of Site:
+<img width="1439" alt="Screen Shot 2020-01-30 at 4 14 35 PM" src="https://user-images.githubusercontent.com/19761687/73498833-ab2b4700-437b-11ea-972a-fd6938e660ed.png">
 
 
 ### Technologies Used:
