@@ -12,4 +12,16 @@ describe('SearchForm', () => {
 
     expect(wrapper).toMatchSnapshot();
   })
+  it('should call the searchArticles prop with the search value when the button is clicked', () => {
+    const mockSearchArticles = jest.fn();
+    const wrapper = shallow(
+      <SearchForm
+        searchArticles={mockSearchArticles}
+        searchValue={'Car'}
+        updateSearchInput={jest.fn()}
+      />
+    );
+    wrapper.find('button').simulate('click');
+    expect(mockSearchArticles).toHaveBeenCalledWith('Car');
+  })
 })

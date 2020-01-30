@@ -11,8 +11,30 @@ it('renders without crashing', () => {
 });
 
 describe('App', () => {
+  let wrapper;
+  const mockAddIdea = jest.fn();
+
+  beforeEach(() => {
+    wrapper = shallow(<App />)
+})
   it('renders an App', () => {
-    const wrapper = shallow(<App />);
     expect(wrapper).toMatchSnapshot();
+  })
+  it('should update currentSource when updateSource is called', () => {
+    const mockSourceEvent = {target:{name: 'local'}};
+    const expectedSource = 'local';
+    wrapper.instance().updateSource(mockSourceEvent);
+    expect(wrapper.state('currentSource')).toEqual(expectedSource);
+  })
+  it('should filter articles when searchArticles is called', () => {
+    const mockSearchValue = 'band';
+    wrapper.instance().searchArticles(mockSearchValue);
+    expect(wrapper.state('currentSource')).toEqual('filtered');
+  })
+  it('should update searchValue when updateSearchInput is called', () => {
+    const mockSearchInput = {target:{value: 'Car'}};
+    const expectedSearch = 'Car';
+    wrapper.instance().updateSearchInput(mockSearchInput);
+    expect(wrapper.state('searchValue')).toEqual(expectedSearch);
   })
 })

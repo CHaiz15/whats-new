@@ -10,7 +10,6 @@ describe('NewsArticle', () => {
       url='gobroncos.com'
       description='Broncos miss the playoffs'
     />);
-
     expect(wrapper).toMatchSnapshot();
   })
 })
