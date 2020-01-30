@@ -9,12 +9,6 @@ import NewsContainer from '../NewsContainer/NewsContainer.js'
 import Menu from '../Menu/Menu.js'
 import SearchForm from '../SearchForm/SearchForm.js'
 
-// let newsData = {
-// fetch('https://whats-new-api.herokuapp.com/api/v1/news')
-// .then(response => response.json())
-// .then(data => this.setState({newsData: data, isLoading: false}))
-// .catch(error => this.setState({ error, isLoading: false}));
-// }
 let newsData = {
     entertainment: entertainment,
     health: health,
@@ -29,8 +23,8 @@ class App extends Component {
       searchValue: '',
       newsData: newsData,
       currentSource: 'local',
-    };
-  };
+    }
+  }
   updateSource = (event) => {
     this.setState({currentSource: event.target.name})
   }
@@ -38,7 +32,7 @@ class App extends Component {
     let filteredArticles = this.state.newsData[this.state.currentSource].filter(article => {
       return article.headline.toLowerCase().includes(searchValue.toLowerCase())
     })
-    this.setState({currentSource: 'filtered', newsData: {...newsData, filtered: filteredArticles}})
+    this.setState({currentSource: 'filtered', newsData: {...this.state.newsData, filtered: filteredArticles}})
   }
   updateSearchInput = (event) => {
     this.setState({searchValue: event.target.value})
