@@ -3,7 +3,7 @@ import { shallow } from 'enzyme'
 import Menu from './Menu.js'
 
 describe('Menu', () => {
-  it('renders an indication Menu', () => {
+  it('renders an indication of Menu', () => {
     const wrapper = shallow(<Menu
       updateSource={jest.fn()}
     />);
