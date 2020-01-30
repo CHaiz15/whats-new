@@ -28,7 +28,8 @@ class App extends Component {
   updateSource = (event) => {
     this.setState({currentSource: event.target.name})
   }
-  searchArticles = (searchValue) => {
+  searchArticles = (searchValue, event) => {
+    event.preventDefault();
     let filteredArticles = this.state.newsData[this.state.currentSource].filter(article => {
       return article.headline.toLowerCase().includes(searchValue.toLowerCase())
     })
