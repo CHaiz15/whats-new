@@ -22,6 +22,6 @@ describe('SearchForm', () => {
       />
     );
     wrapper.find('button').simulate('click');
-    expect(mockSearchArticles).toHaveBeenCalledWith('Car');
+    expect(mockSearchArticles).toHaveBeenCalledWith('Car', undefined);
   })
 })

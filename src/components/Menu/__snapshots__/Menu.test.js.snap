@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Menu renders an indication Menu 1`] = `
+exports[`Menu renders an indication of Menu 1`] = `
 <div
   className="Menu"
 >

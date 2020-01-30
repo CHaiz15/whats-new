@@ -3,7 +3,7 @@ import './SearchForm.css';
 
 const SearchForm = ({searchArticles, searchValue, updateSearchInput}) => {
   return (
-    <div className='search-container'>
+    <form className='search-container'>
       <h3>Search Articles:</h3>
       <input
       className='SearchForm'
@@ -12,8 +12,8 @@ const SearchForm = ({searchArticles, searchValue, updateSearchInput}) => {
       value={searchValue}
       onChange={updateSearchInput}
       />
-      <button onClick={() => searchArticles(searchValue)}>Search</button>
-    </div>
+      <button onClick={(event) => searchArticles(searchValue, event)}>Search</button>
+    </form>
   )
 }
 
